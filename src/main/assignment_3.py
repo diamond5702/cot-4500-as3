@@ -82,15 +82,10 @@ def gauss(A,b):
         x[i] = x[i] / Ab[i,i]
 
     print(x,"\n")
-
-
-
 A= np.array([[2,-1,1],
              [1,3,1],
              [-1,5,4]],dtype=np.double)
 b= np.array([[6,0,-3]],dtype=np.double)    
-
-    
 
 gauss(A,b)
 
@@ -132,12 +127,7 @@ for i in range(4):
 
 #L matrix
 Lmatrix = np.tril(Ab[:, 0:4], k=-1)+ np.eye(4) 
-
-
 print(Lmatrix,"\n")
-
-
-
 
 #c
 matrix = np.array([[1 ,1, 0, 3],
@@ -160,7 +150,6 @@ print(Umatrix,"\n")
 
 #Question 5
 
-
 def diagdom(matrix):
     n=matrix.shape[0]
     matrix = np.array([[9,0,5,2,1],
@@ -172,8 +161,6 @@ def diagdom(matrix):
         if abs(A[i,i]) < np.sum(np.abs(A[i,:])) - abs(A[i,i]):
             return False
     return True
-
-
 print(diagdom(matrix),"\n")
 
 
@@ -183,10 +170,8 @@ def pd(matrix):
     matrix=np.array([[2,2,1],
                      [2,3,0],
                      [1,0,2]])
-
     if np.all(np.linalg.eigvals(matrix)>0):
         return True
     else:
         return False
-
-print(pd(matrix))
+print(pd(matrix),"\n\n")
